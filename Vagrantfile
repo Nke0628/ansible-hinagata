@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
     config.vm.network "private_network", ip: "192.168.33.10"
 
     # フォルダも設定する
-    config.vm.synced_folder './shared', '/home/vagrant/shared', owner: "vagrant", group: "vagrant"
+    config.vm.synced_folder './shared', '/home/vagrant/shared'
 
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "provisioning/site.yml"
