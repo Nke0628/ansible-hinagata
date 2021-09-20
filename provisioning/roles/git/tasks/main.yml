@@ -1,0 +1,42 @@
+---
+- name: Install yum package
+  yum:
+    name:
+      - curl-devel
+      - expat-devel
+      - gettext-devel
+      - openssl-devel
+      - zlib-devel
+      - wget
+      - gcc
+      - cpan
+
+- name: Get git binary
+  unarchive:
+    src: https://www.kernel.org/pub/software/scm/git/git-2.9.5.tar.gz
+    dest: /tmp
+    remote_src: yes
+  changed_when: false
+  register: result
+
+- name: Make all git binary
+  make:
+    chdir: /tmp/git-2.9.5
+    target: all
+    params:
+      prefix: /usr/local
+  changed_when: false
+
+- name: Make install git binary
+  make:
+    chdir: /tmp/git-2.9.5
+    target: install
+    params:
+      prefix: /usr/local
+  changed_when: false
+
+- name: Remove file
+  file:
+    path: /tmp/git-2.9.5
+    state: absent
+  changed_when: false
