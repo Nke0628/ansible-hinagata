@@ -11,3 +11,7 @@ mbstring.detect_order = auto
 mbstring.substitute_character = none;
 mbstring.strict_detection = Off
 ```
+## Laravelインストール
+```angularjs
+composer create-project --prefer-dist laravel/laravel data "6.*"
+```
