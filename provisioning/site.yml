@@ -2,6 +2,8 @@
 - hosts: vagrants
   become: true
   user: vagrant
-  tasks:
-    - name: hello world
-      shell: date
+  roles:
+    - yum
+    - php
+    - composer
+    - git

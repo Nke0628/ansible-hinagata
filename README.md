@@ -1,6 +1,12 @@
-##　手動実行箇所
+## vboxsf
+vbboxsfでエラーが発生した場合は
+vagrant plugin install vagrant-vbguest
+を実行する
+
+## 手動実行箇所
+
 php.ini の変更(root実行)
-```angularjs
+```text
 date.timezone = "Asia/Tokyo"
 mbstring.language = Japanese
 mbstring.internal_encoding = UTF-8
@@ -11,7 +17,9 @@ mbstring.detect_order = auto
 mbstring.substitute_character = none;
 mbstring.strict_detection = Off
 ```
+
 ## Laravelインストール
-```angularjs
+
+```text
 composer create-project --prefer-dist laravel/laravel data "6.*"
 ```
