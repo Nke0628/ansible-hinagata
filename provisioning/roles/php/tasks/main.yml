@@ -21,5 +21,7 @@
       - php80-php-pdo
       - php-xml
       - php-zip
+      - php-pear
+      - php-devel
     state: present
 
