@@ -24,10 +24,12 @@ mbstring.strict_detection = Off
 composer create-project --prefer-dist laravel/laravel data "6.*"
 ```
 
-## VueCliインストール
+## VueCli、vueインストール
 
 ```text
 npm install -g @vue/cli
+vue create frontend
+
 ```
 
 ## 備考
