@@ -23,3 +23,14 @@ mbstring.strict_detection = Off
 ```text
 composer create-project --prefer-dist laravel/laravel data "6.*"
 ```
+
+## VueCliインストール
+
+```text
+npm install -g @vue/cli
+```
+
+## 備考
+初回vagrant upではshardフォルダの権限がrootになっています。  
+一度vagrant halt してから　vagrant upし直してくださいぎ。  
+
