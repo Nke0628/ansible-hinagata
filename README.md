@@ -32,5 +32,5 @@ npm install -g @vue/cli
 
 ## 備考
 初回vagrant upではshardフォルダの権限がrootになっています。  
-一度vagrant halt してから　vagrant upし直してくださいぎ。  
+一度vagrant halt してから　vagrant upし直してください。  
 
